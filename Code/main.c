@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #pragma execution_character_set("utf-8")
 
+int menu;
+
 void aide ()
 {
     FILE* fichier = NULL;
@@ -19,8 +21,32 @@ void aide ()
     }
 }
 
+void afficherMenu ()
+{
+    printf("1 - Jouer\n");
+    printf("2 - Aide\n");
+    printf("3 - Scores\n");
+    scanf("%d", &menu);
+
+
+    switch (menu){
+        case 1: printf ("1 - Jouer\n");
+            break;
+        case 2: printf ("2 - Aide\n");
+            aide();
+            break;
+        case 3: printf ("\n");
+            break;
+        case 4: printf ("\n");
+            break;
+        default: printf ("\n");
+            break;
+    }
+}
+
 int main() {
 
-    aide();
+    afficherMenu();
+
     return 0;
 }
