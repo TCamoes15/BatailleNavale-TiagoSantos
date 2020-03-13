@@ -36,42 +36,36 @@ int grillemasque1010[11][11] = {
 
 };
 
-int jouer ()
-{
+int jouer() {
     bool jeuactif = true;
     int i = 0, j = 0, vertical, horizontal;
 
 
+    while (jeuactif == true) {
+        for (i = 0; i < 11; i++) {
 
-    while(jeuactif == true)
-    {
-        for (i=0; i<10; i++) {
-
-            for (j = 0; j < 10; j++) {
+            for (j = 0; j < 11; j++) {
                 printf("%c\t", grille1010[i][j]);
             }
             printf("\n");
         }
 
         printf("Ou veux tu tirer en horizontal?\n");
-        scanf("%d",&horizontal);
+        scanf("%d", &horizontal);
 
         printf("Ou veux tu tirer en vertical?\n");
-        scanf("%d",&vertical);
+        scanf("%d", &vertical);
 
-        horizontal = horizontal-1;
-        vertical = vertical-1;
+        horizontal = horizontal - 1;
+        vertical = vertical - 1;
 
-        if  (grillemasque1010[horizontal][vertical]==1 ||
-             grillemasque1010[horizontal][vertical]==2 ||
-             grillemasque1010[horizontal][vertical]==3 ||
-             grillemasque1010[horizontal][vertical]==4)
-        {
-            grille1010[horizontal][vertical]='T';
-        }
-        else
-        {
-            grille1010[horizontal][vertical]='R';
+        if (grillemasque1010[horizontal][vertical] == 1 ||
+            grillemasque1010[horizontal][vertical] == 2 ||
+            grillemasque1010[horizontal][vertical] == 3 ||
+            grillemasque1010[horizontal][vertical] == 4) {
+            grille1010[horizontal][vertical] = 'T';
+        } else {
+            grille1010[horizontal][vertical] = 'R';
         }
         system("cls");
     }
