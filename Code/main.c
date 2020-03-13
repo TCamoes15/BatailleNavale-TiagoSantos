@@ -87,8 +87,9 @@ void aide ()
             do{
                 caractereActuel = fgetc(fichier);
                 printf("%c", caractereActuel);
-            }while (caractereActuel != EOF);
 
+            }while (caractereActuel != EOF);
+        system("pause");
             fclose(fichier);
     }
 }
