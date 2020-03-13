@@ -72,21 +72,20 @@ int jouer() {
 
 }
 
-void aide ()
-{
-    FILE* fichier = NULL;
+void aide() {
+    FILE *fichier = NULL;
     int caractereActuel = 0;
 
     fichier = fopen("Aide//Aide.txt", "r");
 
-    if (fichier != NULL){
-            do{
-                caractereActuel = fgetc(fichier);
-                printf("%c", caractereActuel);
+    if (fichier != NULL) {
+        do {
+            caractereActuel = fgetc(fichier);
+            printf("%c", caractereActuel);
 
-            }while (caractereActuel != EOF);
+        } while (caractereActuel != EOF);
         system("pause");
-            fclose(fichier);
+        fclose(fichier);
     }
 }
 
