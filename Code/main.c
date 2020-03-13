@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #pragma execution_character_set("utf-8")
 
 int menu;
@@ -32,6 +33,7 @@ int grillemasque1010 [10][10] = {
 
 
 };
+
 int jouer ()
 {
     bool jeuactif = true;
@@ -73,6 +75,7 @@ int jouer ()
     }
 
 }
+
 void aide ()
 {
     FILE* fichier = NULL;
@@ -99,9 +102,10 @@ void afficherMenu ()
 
 
     switch (menu){
-        case 1: printf ("1 - Jouer\n");
+        case 1:
+            jouer(grille1010,grillemasque1010);
             break;
-        case 2: printf ("2 - Aide\n");
+        case 2:
             aide();
             break;
         case 3: printf ("\n");
