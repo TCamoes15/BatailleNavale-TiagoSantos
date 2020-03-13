@@ -89,28 +89,34 @@ void aide() {
     }
 }
 
-void afficherMenu ()
-{
-    printf("1 - Jouer\n");
-    printf("2 - Aide\n");
-    printf("3 - Scores\n");
-    scanf("%d", &menu);
+void afficherMenu() {
+    do {
+        system("cls");
+        printf("1 - Jouer\n");
+        printf("2 - Aide\n");
+        printf("3 - Scores\n");
+        printf("4 - Quitter\n");
+        scanf("%d", &menu);
 
 
-    switch (menu){
-        case 1:
-            jouer(grille1010,grillemasque1010);
-            break;
-        case 2:
-            aide();
-            break;
-        case 3: printf ("\n");
-            break;
-        case 4: printf ("\n");
-            break;
-        default: printf ("\n");
-            break;
-    }
+        switch (menu) {
+            case 1:
+                jouer(grille1010, grillemasque1010);
+                break;
+            case 2:
+                aide();
+                break;
+            case 3:
+                printf("\n");
+                break;
+            case 4:
+                printf("\n");
+                break;
+            default:
+                printf("\n");
+                break;
+        }
+    }while(menu!=4);
 }
 
 int main() {
