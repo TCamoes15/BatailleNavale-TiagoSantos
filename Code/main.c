@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #pragma execution_character_set("utf-8")
 
@@ -50,14 +51,14 @@ int jouer() {
             printf("\n");
         }
 
-        printf("Ou veux tu tirer en horizontal?\n");
+        printf("Ou veux tu tirer en vertical?\n");
         scanf("%d", &horizontal);
 
-        printf("Ou veux tu tirer en vertical?\n");
+        printf("Ou veux tu tirer en horizontal?\n");
         scanf("%d", &vertical);
 
-        horizontal = horizontal - 1;
-        vertical = vertical - 1;
+        horizontal = horizontal + 1;
+
 
         if (grillemasque1010[horizontal][vertical] == 1 ||
             grillemasque1010[horizontal][vertical] == 2 ||
