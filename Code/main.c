@@ -74,20 +74,23 @@ int jouer() {
 }
 
 void aide() {
-    FILE *fichier = NULL;
-    int caractereActuel = 0;
 
-    fichier = fopen("Aide//Aide.txt", "r");
 
-    if (fichier != NULL) {
-        do {
-            caractereActuel = fgetc(fichier);
-            printf("%c", caractereActuel);
-
-        } while (caractereActuel != EOF);
-        system("pause");
-        fclose(fichier);
-    }
+    printf("\nRègles\n\n");
+    printf("Vous devez choisir une grille et les bateaux seront pose de forme aleatoire.\n"
+           "Vous devriez par la suite choisir le numero de la ligne et le numero de la colonne pour pouvoir tirer.\n"
+           "Quand la lettre 'X' ce affiche c'est pour vous dire que vous avez toucher un bateau.\n"
+           "Quand la lettre 'O' ce affiche c'est pour vous dire que vous avez rate votre tir\n"
+           "Quand la lettre 'C' ce affiche c'est pour vous dire que vous avez toucher et couler le bateau.");
+    printf("Il y'a 5 bateaux :\n"
+           "1 porte-avions (5 cases)\n"
+           "1 croiseur (4 cases)\n"
+           "1 contre-torpilleur (3 cases)\n"
+           "1 torpilleur (2 cases)\n"
+           "1 sous-marin (1 case)\n"
+           "\n"
+           "Pour gagner il faut faire couler tous les bateaux adverses dans le moins de tour possible.\n");
+    system("pause");
 }
 
 void afficherMenu() {
@@ -106,6 +109,7 @@ void afficherMenu() {
                 break;
             case 2:
                 aide();
+
                 break;
             case 3:
                 printf("\n");
@@ -121,6 +125,7 @@ void afficherMenu() {
 }
 
 int main() {
+    SetConsoleOutputCP(65001);
 
     afficherMenu();
 
