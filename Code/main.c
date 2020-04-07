@@ -51,13 +51,14 @@ int jouer() {
             printf("\n");
         }
 
-        printf("Ou veux tu tirer en vertical?\n");
+        printf("Ou veux tu tirer en vertical? (0-9)\n");
         scanf("%d", &horizontal);
 
-        printf("Ou veux tu tirer en horizontal?\n");
+        printf("Ou veux tu tirer en horizontal? (1-10, 1 = A 2 = B etc)\n");
         scanf("%d", &vertical);
 
         horizontal = horizontal + 1;
+
 
 
         if (grillemasque1010[horizontal][vertical] == 1 ||
