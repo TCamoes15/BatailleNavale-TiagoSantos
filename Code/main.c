@@ -23,7 +23,7 @@ char grille1010[11][11] = {
 };
 int grillemasque1010[11][11] = {
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 1, 0, 0, 6, 6, 6, 0, 0, 0},
+        {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 1, 0, 0, 0, 0, 0, 0, 4, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0},
@@ -63,7 +63,8 @@ int jouer() {
         if (grillemasque1010[horizontal][vertical] == 1 ||
             grillemasque1010[horizontal][vertical] == 2 ||
             grillemasque1010[horizontal][vertical] == 3 ||
-            grillemasque1010[horizontal][vertical] == 4) {
+            grillemasque1010[horizontal][vertical] == 4 ||
+            grillemasque1010[horizontal][vertical] == 5) {
             grille1010[horizontal][vertical] = 'T';
         } else {
             grille1010[horizontal][vertical] = 'R';
