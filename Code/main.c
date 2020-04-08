@@ -1,3 +1,10 @@
+/**
+ *    Titre: Bataille Navale
+      Auteur: Tiago Santos
+      Date: 08.04.2020
+      Description: Version 1.0 Bataille Navale
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
