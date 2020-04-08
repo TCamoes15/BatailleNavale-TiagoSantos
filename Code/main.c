@@ -58,8 +58,7 @@ void pseudo() {
 
 
 int jouer() {
-    bool jeuactif = true;
-    int i = 0, j = 0, vertical, horizontal;
+    int i = 0, j = 0, vertical = 0, horizontal = 0;
 
 
     while (jeuactif == true) {
