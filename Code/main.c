@@ -44,6 +44,19 @@ int grillemasque1010[11][11] = {
 
 };
 
+/**
+ * Demander le Pseudo au utilisateur
+ */
+
+void pseudo() {
+
+    printf("Inserez votre Pseudo:\n");
+    fflush(stdin);
+    scanf("%s", &nickname);
+
+}
+
+
 int jouer() {
     bool jeuactif = true;
     int i = 0, j = 0, vertical, horizontal;
