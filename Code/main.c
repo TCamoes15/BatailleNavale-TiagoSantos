@@ -13,6 +13,9 @@
 #pragma execution_character_set("utf-8")
 
 int menu;
+/**
+ * Grille de 10x10
+ */
 
 char grille1010[11][11] = {
         {'X', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'},
