@@ -114,6 +114,10 @@ void aide() {
     system("pause");
 }
 
+/**
+ * Menu avec l'appelle des variables (aide, pseudo et jouer)
+ */
+
 void afficherMenu() {
     do {
         system("cls");
