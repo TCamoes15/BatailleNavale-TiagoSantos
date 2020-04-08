@@ -71,7 +71,9 @@ void pseudo() {
 int jouer() {
     int i = 0, j = 0, vertical = 0, horizontal = 0;
 
-
+/**
+ * Création de la grille 10x10
+ */
     do  {
         for (i = 0; i < 11; i++) {
 
@@ -95,6 +97,10 @@ int jouer() {
         }while (horizontal>10 || horizontal<0 || vertical>10 || vertical<1);
 
         coups = coups - 1;
+
+/**
+ * Vérification pour savoir si on a touché ou raté les bateaux
+ */
 
         if (grillemasque1010[horizontal][vertical] == 1 ||
             grillemasque1010[horizontal][vertical] == 2 ||
