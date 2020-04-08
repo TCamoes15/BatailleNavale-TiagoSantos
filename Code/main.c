@@ -110,7 +110,8 @@ void aide() {
            "1 torpilleur (2 cases)\n"
            "1 sous-marin (1 case)\n"
            "\n"
-           "Pour gagner il faut faire couler tous les bateaux adverses dans le moins de tour possible.\n");
+           "Pour gagner il faut faire couler tous les bateaux adverses dans le moins de tour possible.\n"
+           "Vous avez un maximum de 50 coups.\n");
     system("pause");
 }
 
