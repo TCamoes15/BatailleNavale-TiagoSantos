@@ -12,7 +12,10 @@
 
 #pragma execution_character_set("utf-8")
 
-int menu;
+int menu, nickname, coups = 50,  nbBateaux = 15;
+
+
+
 /**
  * Grille de 10x10
  */
@@ -163,7 +166,6 @@ void afficherMenu() {
                 break;
             case 2:
                 aide();
-
                 break;
             case 3:
                 printf("\n");
