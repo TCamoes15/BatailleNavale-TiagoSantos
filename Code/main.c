@@ -140,8 +140,7 @@ void afficherMenu() {
                 printf("\n");
                 break;
             case 4:
-                printf("\n");
-                break;
+                exit(0);
             default:
                 printf("\n");
                 break;
@@ -154,5 +153,5 @@ int main() {
 
     afficherMenu();
 
-    return 0;
+    return main();
 }
