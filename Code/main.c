@@ -114,6 +114,10 @@ int jouer() {
 
 }
 
+/**
+ * Aide avec toutes les règles de jeu
+ */
+
 void aide() {
 
 
