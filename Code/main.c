@@ -61,7 +61,7 @@ int jouer() {
     int i = 0, j = 0, vertical = 0, horizontal = 0;
 
 
-    while (jeuactif == true) {
+    do  {
         for (i = 0; i < 11; i++) {
 
             for (j = 0; j < 11; j++) {
@@ -70,15 +70,20 @@ int jouer() {
             printf("\n");
         }
 
-        printf("Ou veux tu tirer en vertical? (0-9)\n");
-        scanf("%d", &horizontal);
+        printf("Vous avez %d coups\n\n", coups);
 
-        printf("Ou veux tu tirer en horizontal? (1-10, 1 = A 2 = B etc)\n");
-        scanf("%d", &vertical);
+        do {
+            if (coups !=0){
+                printf("Ou veux tu tirer en vertical? (0-9)\n");
+                scanf("%d", &horizontal);
 
-        horizontal = horizontal + 1;
+                printf("Ou veux tu tirer en horizontal? (1-10, 1 = A 2 = B etc)\n");
+                scanf("%d", &vertical);
 
+                horizontal = horizontal + 1;}
+        }while (horizontal>10 || horizontal<0 || vertical>10 || vertical<1);
 
+        coups = coups - 1;
 
         if (grillemasque1010[horizontal][vertical] == 1 ||
             grillemasque1010[horizontal][vertical] == 2 ||
@@ -86,11 +91,21 @@ int jouer() {
             grillemasque1010[horizontal][vertical] == 4 ||
             grillemasque1010[horizontal][vertical] == 5) {
             grille1010[horizontal][vertical] = 'T';
+            nbBateaux = nbBateaux - 1;
         } else {
             grille1010[horizontal][vertical] = 'R';
         }
         system("cls");
-    }
+
+        if (coups == 0){
+            printf("          Vous avez perdu!\n");
+        }
+
+        if (nbBateaux == 0){
+            printf("          Vous avez gagné!\n");
+        }
+
+    }while (coups!=0 || nbBateaux!=0);
 
 }
 
