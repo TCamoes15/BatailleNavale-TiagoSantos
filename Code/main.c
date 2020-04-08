@@ -119,6 +119,7 @@ void aide() {
  */
 
 void afficherMenu() {
+    pseudo();
     do {
         system("cls");
         printf("1 - Jouer\n");
